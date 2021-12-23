@@ -1,0 +1,35 @@
+# BASH Customizations
+
+# don't put duplicate lines or lines starting with space in the history.
+export DOCKER_HOST=tcp://localhost:2375
+export EDITOR=/usr/bin/nano
+
+# command history nav
+bind '"\eOA": history-search-backward'
+bind '"\e[A": history-search-backward' 
+bind '"\eOB": history-search-forward'
+bind '"\e[B": history-search-forward'
+
+# append to the history file, don't overwrite it
+complete -cf sudo
+
+shopt -s cdspell 
+shopt -s cmdhist
+shopt -s dotglob
+shopt -s expand_aliases
+shopt -s extglob
+shopt -s hostcomplete
+shopt -s globstar
+
+# Alias definitions folder.
+# You may want to put all your additions into a separate file like
+
+if [ -d ~/.bash.d ]; then
+	for i in ~/.bash.d/*; do
+		if [ -f "${i}" ]; then
+			source "${i}"
+		fi
+	done
+fi
+
+

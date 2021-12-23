@@ -1,0 +1,5 @@
+#!/bin/bash
+
+function pretty-path {
+    echo -e ${PATH//:/\\n}
+}
