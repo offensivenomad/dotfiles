@@ -1,3 +1,4 @@
+#!/bin/bash
 # BASH Customizations
 
 # don't put duplicate lines or lines starting with space in the history.
