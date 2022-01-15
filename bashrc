@@ -68,6 +68,7 @@ fi
 #    eval "$(<$XDG_RUNTIME_DIR/ssh-agent.env)"
 #fi
 
+
 # Alias definitions folder.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly. 
@@ -93,19 +94,3 @@ if ! shopt -oq posix; then
 fi
 
 fetchme
-
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local

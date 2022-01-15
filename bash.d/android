@@ -1,5 +1,9 @@
 #!/bin/bash
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+enableANDROID="n"
+
+if [[ $enableANDROID == "y" ]]; then
+  export ANDROID_HOME=$HOME/Android/Sdk
+  export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin 
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi

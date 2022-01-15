@@ -1,4 +1,9 @@
 #!/bin/bash
 
-export FLUTTER_ROOT=$HOME/Flutter/Sdk
-export PATH=$FLUTTER_ROOT/bin:$PATH
+enableFLUTTER="n"
+
+if [[ enableFLUTTER == "y" ]]; then
+	export FLUTTER_ROOT=$HOME/Flutter/Sdk
+	export PATH=$FLUTTER_ROOT/bin:$PATH
+fi
+

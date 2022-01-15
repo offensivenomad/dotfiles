@@ -9,3 +9,5 @@ function installBrew {
   echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.profile
   echo "SUCCESS :D"
 }
+
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -19,26 +19,26 @@ LINE="#-#-##--#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#--##-#-#"
 BARS="-----------------------------------"
 COMPLETE=$(clr_green "...COMPLETE")
 
-echo ${BREAK}
+echo "${BREAK}"
 clr_green "${LINE}"
 clr_green "#-#-##-- " -n; clr_escape "${BARS}" 1 33; clr_green " --##-#-#";
 clr_green "#-#-##-- " -n; clr_escape "${BARS}" 1 33; clr_green " --##-#-#";
-clr_green "#-#-##-- " -n; clr_escape "OFFENSIVE NOMAD'S DOTFILE INSTALLER" 1 31; clr_green " --##-#-#";
+clr_green "#-#-##-- " -n; clr_escape "OFFENSIVE NOMAD'S DOTFILE INSTALLER" 1 33; clr_green " --##-#-#";
 clr_green "#-#-##-- " -n; clr_escape "${BARS}" 1 33; clr_green " --##-#-#";
 clr_green "#-#-##-- " -n; clr_escape "${BARS}" 1 33; clr_green " --##-#-#";
 clr_green "${LINE}"
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 ## Link BASHRC customizations
 clr_brown echo 'LINKING Local bash customisations'
 echo "source $HOME/.dotfiles/bashrc.local" | tee -a "$H"/.bashrc
 echo "source $HOME/.bashrc" | tee 
 echo "${COMPLETE[@]}" 
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 
 ## UPDATE SYSTEM
@@ -55,9 +55,9 @@ if [[ "${depInstall}" == "y" ]]; then
 else
 clr_blueb clr_brown	echo "Skipping package dependency install"; 
 fi
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 ## LINK DOTFILES
 clr_whiteb clr_red echo "Link User Dotfiles? (y/n)"; clr_escape;
@@ -101,7 +101,7 @@ if [[ "${dotLink}" == "y" ]]; then
 	ln -snf "$D"/nanorc "$H"/.nanorc
 	echo "${COMPLETE[@]}" 
 fi
-echo ${BREAK}
+echo "${BREAK}"
 
 # shellcheck source=/dev/null
 echo "source $HOME/.bashrc" | tee 
@@ -117,9 +117,9 @@ if [ -f "/root/.bashrc" ]; then
 else
 	clr_red echo "...ROOTRC LINKS SKIPPED"
 fi
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 
 ## INSTALL NVM
@@ -132,9 +132,9 @@ if [[ ${installNvm} == "y" ]]; then
 	installNVM
 fi
 echo "${COMPLETE[@]}" 
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 ## INSTALL Homebrew
 clr_whiteb clr_red echo "Install Homebrew? (y/n)"; clr_escape;
@@ -145,13 +145,14 @@ if [[ ${installHomebrew} == "y" ]]; then
 	# shellcheck source=/dev/null
 	source "$H/.bash.d/brew"
 	installBrew
-	echo "${COMPLETE[@]}" 
+	echo "${COMPLETE[@]}"
+	fi 
 else
 	clr_red echo "...HOMEBREW ALREADY EXISTS" 
 fi
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 ## INSTALL Oh-My-Posh
 clr_whiteb clr_red echo "Install Oh-My-Posh? (y/n)"; clr_escape;
@@ -159,14 +160,17 @@ read -res installMyPosh
 if [[ ${installMyPosh} == "y" ]]; then
 	clr_brown echo "...INSTALLING OH-MY-POSH"; clr_escape;
 	# shellcheck source=/dev/null
-	source "$H"/.bash.d/oh-my-posh
+	source "$H"/.bash.d/ohmyposh.sh
 	installOhMyPosh
 fi
 echo "${COMPLETE[@]}" 
-echo ${BREAK}
-echo ${BREAK}
-echo ${BREAK}
+echo "${BREAK}"
+echo "${BREAK}"
+echo "${BREAK}"
 
 clr_blueb clr_white clr_bold echo "#-#-##-- Offensive Nomad's dotfile installation complete"
+
+# shellcheck source=/dev/null
+source "${HOME}/.bashrc"
 
 exit 0
