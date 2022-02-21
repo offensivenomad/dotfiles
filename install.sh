@@ -109,8 +109,8 @@ echo "source $HOME/.bashrc" | tee
 ## LINKING ROOT DOTS
 ${BREAK}
 clr_reverse clr_brown echo "...LINKING ROOT DOTS";
-if [ -f "/root/.bashrc" ]; then
-	sudo cp "${ROOT}/.bashrc" "${ROOT}/.bashrc.bak"
+if [ -d "/root" ]; then
+	sudo cp "${ROOT}"/.bashrc "${ROOT}"/.bashrc.bak
 	clr_brown echo "...ROOT BASHRC BACKUP CREATED";
 	sudo ln -snf "${R}"/bashrc "${ROOT}"/.bashrc
 	echo "${COMPLETE[@]}" 
