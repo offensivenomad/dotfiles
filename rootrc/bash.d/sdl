@@ -13,7 +13,7 @@
 # -nH (--no-host-directories) == Disable generation of host-prefixed directories.
 # -P == directory prefix
 
-sdl() {
+function sdl {
 	URI="$1"
 	DEST="$(echo "${URI}" | sed -e 's|^[^/]*//[w.]*||' -e 's|/.*$||')"
 

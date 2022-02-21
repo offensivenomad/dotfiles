@@ -93,6 +93,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-fetchmesource /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
-source /home/loki/.dotfiles/bashrc.local
+fetchme

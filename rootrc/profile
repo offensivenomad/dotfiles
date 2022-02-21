@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f "${ROOT}/.bashrc" ] ; then 
-	source "${ROOT}/.bashrc"
+if [ -f "/root/.bashrc" ] ; then
+	source "/root/.bashrc"
 fi
 
