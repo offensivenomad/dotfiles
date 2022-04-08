@@ -18,7 +18,7 @@ sdl() {
 	DEST="$(echo "${URI}" | sed -e 's|^[^/]*//[w.]*||' -e 's|/.*$||')"
 
 	echo "##################################"
-	echo "###  Download website ${DEST}  ###"
+	echo "###  Download ${DEST}  ###"
 	echo "##################################"
 
 	mkdir "${DEST}"
