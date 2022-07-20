@@ -1,0 +1,10 @@
+#!/bin/bash
+
+poshtheme() {
+	THEME="$HOME/.mytheme.omp.json"
+
+	unlink $THEME
+	ln -s $1 $THEME
+	ls -lsh $THEME
+}
+
