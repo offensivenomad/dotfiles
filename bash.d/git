@@ -82,3 +82,4 @@ gp(){
 
 ###GIT CLONE###
 alias gc='git clone'
+alias gl='git pull'
