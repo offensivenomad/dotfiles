@@ -1,1 +1,5 @@
-gitconfig
+[color]
+	ui = true
+[user]
+	name = offensivenaomd
+	email = 58550032+offensivenomad@users.noreply.github.com 

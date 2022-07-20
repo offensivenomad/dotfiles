@@ -1,5 +1,5 @@
 #!/bin/bash
 
-function pretty-path {
+function ppath {
     echo -e ${PATH//:/\\n}
 }

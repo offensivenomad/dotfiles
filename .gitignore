@@ -1,1 +1,24 @@
-gitignore
+config/*
+
+!/config/htop
+!/config/neofetch
+!/config/tabtab
+!/config/wallpapers
+!/config/mimeapps.list
+!/config/firefox.conf
+!/config/configstore
+
+node_modules
+npm-debug.log
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+**/.github
+**/.git
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
