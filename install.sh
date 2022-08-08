@@ -160,7 +160,7 @@ read -res installMyPosh
 if [[ ${installMyPosh} == "y" ]]; then
 	clr_brown echo "...INSTALLING OH-MY-POSH"; clr_escape;
 	# shellcheck source=/dev/null
-	source "$H"/.bash.d/ohmyposh.sh
+	source "$H"/.bash.d/posh-install
 	installOhMyPosh
 fi
 echo "${COMPLETE[@]}" 
