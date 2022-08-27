@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+function npmg() {
+	npm install --location="global" "$1" # arguments are accessible through $1, $2,...
+}
+
+function npml() {
+	npm install location="local" "$1"
+}
+
+function npmi() {
+	npm init --yes
+}
+
+function npm() {
+
+	case "${1}" in
+	g)
+		npm install --location="global" "${2}"
+		;;
+	l)
+		npm install --location="local" "${2}"
+		;;
+	i)
+		npm init --yes
+		;;
+	*)
+		echo "default (none of above)"
+		;;
+	esac
+}
