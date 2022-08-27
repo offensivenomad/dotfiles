@@ -104,3 +104,4 @@ export NVM_DIR="$HOME/.nvm"
 source /home/loki/.dotfiles/bashrc.local
 source /home/loki/.dotfiles/bashrc.local
 source /home/loki/.dotfiles/bashrc.local
+source /home/loki/.dotfiles/bashrc.local
